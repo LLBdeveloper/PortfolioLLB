@@ -1,52 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Splash from '../components/splash.astro'
+import Splash from '../components/Splash.astro'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import About from '../components/About.astro'
+
 ---
 
 <Layout title="Welcome to Astro.">
-	<header class="py-4 px-10 flex items-center fixed top-0  w-full justify-between z-50">
-		<div class="flex flex-grow basic-0 items-center">
-			<img src="../../public/planets.png" class="h-10 w-10"  alt="logo">
-			<h1 class="mx-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500 font-extrabold text-lg">&lt;LLB/&gt;</h1>
-		</div >
-		<nav>
-			<ul class="flex text-sm [&>li>a]:inline-block [&>li>a]:font-bold [&>li>a]:px-4 [&>li>a]:py-2">
-				<li><a class="hover:bg-fuchsia-600 rounded" href="#">About</a></li>
-				<li><a class="hover:bg-fuchsia-600 rounded" href="#">Tecnologies</a></li>
-				<li><a class="hover:bg-fuchsia-600 rounded" href="#">Projects</a></li>
-				<li><a class="hover:bg-fuchsia-600 rounded" href="#">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
 
-	<main class=" bg-violet-900"> 
-		<div class="w-full h-screen bg-gray-900"> 
-			
+	<Header/>
+	
+	<main class=" "> 
+		<section class="w-full h-screen "> 
 			<Splash/>
-		</div>
+		</section>
 		<div class="w-full h-screen bg-violet-900">
-
+			<About/>
 		</div>
-		<div class="w-full h-screen bg-slate-400">
+		<div class="w-full h-screen bg-slate-800">
 
 		</div>
 		<div class="w-full h-screen bg-teal-400">
 
 		</div>
 	</main>
-	<footer class="py-10 px-10 flex items-center   w-full justify-center z-30 text-white">
-		<nav>
-			<p>Powered by WEB MASTER STUDIO ® | Copyright 2024 © - Todos los Derechos Reservados </p>
-			<!-- <ul class="flex  text-gray-500 text-sm [&>li>a]:white [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2 [&>li>a]:rounded">
-				<li><a class="hover:bg-gray-400 hover:text-black" href="#">Web Master Studio © 2024</a></li>
-				<li><a class="hover:bg-gray-400 hover:text-black" href="#">Privacy & Legal</a></li>
-				<li><a class="hover:bg-gray-400 hover:text-black" href="#">Vehicle Recalls</a></li>
-				<li><a class="hover:bg-gray-400 hover:text-black" href="#">Contact</a></li>
-				<li><a class="hover:bg-gray-400 hover:text-black" href="#">News</a></li>
-				<li><a class="hover:bg-gray-400 hover:text-black" href="#">Get Updates</a></li>
-				<li><a class="hover:bg-gray-400 hover:text-black" href="#">Locations</a></li>
-	
-			</ul> -->
-		</nav>
-	</footer>
+	<Footer/>
 </Layout>
