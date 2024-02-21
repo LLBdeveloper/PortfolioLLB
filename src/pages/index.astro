@@ -4,6 +4,8 @@ import Splash from '../components/Splash.astro'
 import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import About from '../components/About.astro'
+import Technologies from '../components/Technologies.astro'
+import Projects from '../components/Projects.astro'
 
 ---
 
@@ -11,19 +13,34 @@ import About from '../components/About.astro'
 
 	<Header/>
 	
-	<main class=" "> 
-		<section class="w-full h-screen "> 
+	<main class=" snap-y snap-mandatory relative w-full h-screen overflow-x-hidden scroll-m-0"> 
+		
+		
+		<section id="home" class="w-full h-screen snap-center"> 
 			<Splash/>
 		</section>
-		<div class="w-full h-screen bg-violet-900">
+		
+		<section id="about" class="w-full h-screen bg-black pt-20 snap-center">
 			<About/>
-		</div>
-		<div class="w-full h-screen bg-slate-800">
+		</section>
+		
+		<section id="tecnologies" class="w-full h-screen bg-gray-800 snap-center pt-20">
+			<Technologies/>
+		</section>
+		
+		<section id="projects" class="w-full h-screen bg-teal-400 snap-center pt-20">
+			<Projects/>
+		</section>
 
-		</div>
-		<div class="w-full h-screen bg-teal-400">
+		<footer class="snap-center">
+			<Footer />
+		</footer>
 
-		</div>
 	</main>
-	<Footer/>
+
+
 </Layout>
+
+
+
+ 
